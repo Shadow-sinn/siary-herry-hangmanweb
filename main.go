@@ -2,7 +2,11 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"math/rand"
+	"net/http"
+	"os"
+	"strings"
 	"time"
 )
 
@@ -10,16 +14,28 @@ var (
 	wins, losses, abortions int
 	commonWords             = []string{"leur", "aurait", "à propos", "là", "penser", "lequel", "gens", "pourrait", "autre", "ces"} // Liste de mots simplifiée
 	gameInProcess           bool
-	answer, maskedAnswer   string
+	answer, maskedAnswer    string
 	wrongGuesses            int
 )
 
 func main() {
+	temp, err := template.ParseGlob("./siary-herry-hangmanweb/*.html")
+	if err != nil {
+		fmt.Println(fmt.Sprint("ERREUR => %s", err.Error()))
+		return
+	}
+
 	gameInProcess = false
 	answer = newRandomWord()
 
 	// Commence un nouveau jeu
 	newGame()
+
+	rootDoc, _ := os.Getwd()
+	fileserver := http.FileServer(http.Dir(rootDoc + "/siary-herry-hangmanweb"))
+	http.Handle("/static/", http.StripPrefix("/static/", fileserver))
+
+	http.ListenAndServe("localhost:8080", nil)
 }
 
 func newGame() {
