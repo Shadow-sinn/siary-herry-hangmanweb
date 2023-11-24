@@ -1,0 +1,176 @@
+html {
+    background-color:rgb(29, 29, 30);
+    opacity: 0.9;
+}
+
+h1 {
+    color:rgba(224, 0, 253, 0.808);
+    font-weight:bold;
+    text-align: center;
+    font-size: 110px;
+    font-family: '8-bit Arcade In', Impact;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgb(93, 197, 234), 0 0 5px rgb(93, 197, 234),
+                0 0 5px rgb(93, 197, 234), 0 0 5px rgb(93, 197, 234);
+}
+
+label {
+    font-size:20px;
+    font-family: Impact;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808),
+                0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808);
+}
+
+.word {
+    color: white;
+    height: 500px;
+    width: 48%;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(224, 0, 253, 0.808);
+    box-shadow: 0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234),
+                0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234);
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hang {
+    height: 500px;
+    width: 48%;
+    writing-mode: horizontal-tb;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(224, 0, 253, 0.808);
+    box-shadow: 0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234),
+                0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234);
+}
+
+.block_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.block_puce_footer {
+    color: white;
+    block-size: auto;
+
+}
+
+.hidden_word {
+    font-family: Impact;
+    letter-spacing: 15px;
+    font-size: 55px;
+    text-shadow: 0 0 5px rgb(51, 235, 34), 0 0 5px rgb(51, 235, 34),
+                0 0 5px rgb(51, 235, 34), 0 0 5px rgb(51, 235, 34);
+}
+
+.text {
+    font-size: 20px;
+    font-family: Impact;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808),
+                0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808);
+}
+
+.win_condition {
+    padding-top: 110px;
+    position: center;
+    color: rgba(224, 0, 253, 0.808);
+    text-shadow: 0 0 5px rgb(241, 245, 36), 0 0 5px rgb(241, 245, 36),
+                0 0 5px rgb(241, 245, 36), 0 0 5px rgb(241, 245, 36);
+    font-size: 50px;
+    font-family: Impact;
+}
+
+.hang > img {
+    width: 100%;
+    height: 100%;
+}
+
+.lose_condition {
+    padding-top: 110px;
+    position: center;
+    color: rgba(224, 0, 253, 0.808);
+    text-shadow: 0 0 5px rgb(241, 245, 36), 0 0 5px rgb(241, 245, 36),
+                0 0 5px rgb(241, 245, 36), 0 0 5px rgb(241, 245, 36);
+    font-size: 50px;
+    font-family: Impact;
+}
+
+.random_word {
+    position: center;
+    color:rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808),
+                0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808);
+    font-size: 30px;
+    font-family: Impact;
+}
+
+.print_word {
+    font-size: 30px;
+    position: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808),
+                0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808);
+    font-family: Impact;
+}
+
+#button {
+    background-color: rgb(29, 29, 30);
+    position: relative;
+    text-align: center;
+    width: 225px;
+    padding: 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 5px solid rgba(224, 0, 253, 0.808);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 1.5s;
+    text-shadow: 0 0 5px rgba(224, 0, 253, 0.808), 0 0 5px rgba(224, 0, 253, 0.808);
+}
+
+#button:hover{
+    box-shadow: 0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234),
+                0 5px 50px 0 rgb(93, 197, 234) inset, 0 5px 50px 0 rgb(93, 197, 234);
+}
+
+#form_bar {
+    background-color: rgb(29, 29, 30);
+    position: relative;
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+    margin:10px;
+    font-size:20px;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 5px solid rgba(224, 0, 253, 0.808);
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: 1.5s;
+}
+
+#form_bar:hover {
+    box-shadow: 0 0 5px rgb(93, 197, 234), 0 0 5px rgb(93, 197, 234),
+    0 0 5px rgb(93, 197, 234), 0 0 5px rgb(93, 197, 234)
+}
+
+@font-face {
+    font-family: '8-bit Arcade In';
+    src: url('police/8-bit Arcade In.ttf');
+}
+
+@font-face {
+    font-family: '8-bit Arcade In';
+    src: url('police/8-bit Arcade In.ttf');
+}

@@ -1,0 +1,77 @@
+{{define "jeu"}}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/jeu.css"/>
+
+    <title>Hangman-WEB</title>
+</head>
+
+<body>
+    <div class="style_programme">
+        <p class="hidden_word">{{ .Randomwordhide }}</p>
+        <p class="text">Letter already used : <br>{{ .Usedletter }}</p>
+        <p class="text">Attempt Left : {{ .Essaie }}</p>
+    </div>
+
+    <div class="form">
+        <form action="/hangman" method="POST">
+            <label for="lettre">Choisissez une lettre/mot</label><br>
+            <input id="form_bar" type="text" name="lettre" autofocus><br>
+            <input id="button" type="submit" value="Send The Letter">
+        </form> 
+    </div>
+    <div class="hang">
+
+        {{ if eq .Essaie 9}}
+            <img src="style/image/1.png" alt="1ere erreur">
+        {{ else if eq .Essaie 8}}
+            <img src="style/image/2.png" alt="2eme erreur">
+        {{ else if eq .Essaie 7}}
+            <img src="style/image/3.png" alt="3eme erreur">
+        {{ else if eq .Essaie 6}}
+            <img src="style/image/4.png" alt="4eme erreur">
+        {{ else if eq .Essaie 5}}
+            <img src="style/image/5.png" alt="5eme erreur">
+        {{ else if eq .Essaie 4}}
+            <img src="style/image/6.png" alt="6eme erreur">
+        {{ else if eq .Essaie 3}}
+            <img src="style/image/7.png" alt="7eme erreur">
+        {{ else if eq .Essaie 2}}
+            <img src="style/image/8.png" alt="8eme erreur">
+        {{ else if eq .Essaie 1}}
+            <img src="style/image/9.png" alt="9eme erreur">
+        {{ else if eq .Essaie 0}}
+            <img src="style/image/10.png" alt="10eme erreur">
+        {{ end }}
+
+    </div>
+
+    <footer>
+        <div class=block_footer>
+            <div class="block_puce_footer">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="text">Developpeur WEB: Arthur Herry</p>
+                <p class="text">Programmeur Golang: Louka Siary Maurel</p>
+            </div>
+            <div class="block_logo_ynov_footer">
+                <br>
+                <br>
+                <br>
+                <img class="logo_ynov_footer "src="style/image/prj_ynov.png" alt="logo YNOV Campus"/>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+{{end}}

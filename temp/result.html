@@ -1,0 +1,57 @@
+{{define "result"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/result.css"/>
+
+    <title>Hangman-WEB</title>
+</head>
+<body>
+    <div class="body">
+        <div class="word">
+            {{ if eq .State "win" }}
+                <div class="win_condition">You Win !</div>
+                    <p class="random_word">Congratulations, the word was</p>
+                    <p class="print_word"> => "{{ .Randomword }}"</p>
+                    <form action="/restart" method="POST">
+                    <input id="button" type="submit" value="New Game">
+                </form>
+
+            {{ else if eq .State "lose" }}
+
+                <div class="lose_condition">You Lose !</div>
+                    <p class="random_word">You dumb, the word was </p>
+                    <p class="print_word"> => "{{ .Randomword }}"</p>
+                    <form action="/restart" method="POST">
+                    <input id="button" type="submit" value="New Game">
+                </form>
+            {{end}}
+        </div>
+    </div>
+
+    <footer>
+        <div class=block_footer>
+            <div class="block_puce_footer">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="text">Developpeur WEB: Arthur Herry</p>
+                <p class="text">Programmeur Golang: Louka Siary Maurel</p>
+            </div>
+            <div class="block_logo_ynov_footer">
+                <br>
+                <br>
+                <br>
+                <img class="logo_ynov_footer "src="style/image/prj_ynov.png" alt="logo YNOV Campus"/>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+{{end}}
