@@ -1,4 +1,4 @@
-{{define "pseudo"}}
+{{define "id"}}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,6 +10,13 @@
     <title>Hangman-WEB</title>
 </head>
 <body>
+    <div>
+        <p>Entrez votre pseudo</p>
+        <form action="/treatment/id" method="post">
+            <input type="text" name="Pseudo" maxlength="20" placeholder="Pseudo">
+            <button class="button" type="submit"></button>
+        </form>
+    </div>
     <footer>
         <div class=block_footer>
             <div class="block_puce_footer">

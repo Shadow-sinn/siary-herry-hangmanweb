@@ -14,39 +14,39 @@
 
 <body>
     <div class="style_programme">
-        <p class="hidden_word">{{ .Randomwordhide }}</p>
-        <p class="text">Letter already used : <br>{{ .Usedletter }}</p>
-        <p class="text">Attempt Left : {{ .Essaie }}</p>
+        <p>Test</p>
+        <p class="hidden_word">{{.Mot}}</p>
+        <p class="text">Attempt Left : {{.Score}}</p>
     </div>
 
     <div class="form">
-        <form action="/hangman" method="POST">
+        <form action="/treatment/jeu" method="POST">
             <label for="lettre">Choisissez une lettre/mot</label><br>
             <input id="form_bar" type="text" name="lettre" autofocus><br>
-            <input id="button" type="submit" value="Send The Letter">
+            <button id="button" type="submit" value="Send The Letter"></button>
         </form> 
     </div>
     <div class="hang">
 
-        {{ if eq .Essaie 9}}
+        {{ if eq .Score 9}}
             <img src="style/image/1.png" alt="1ere erreur">
-        {{ else if eq .Essaie 8}}
+        {{ else if eq .Score 8}}
             <img src="style/image/2.png" alt="2eme erreur">
-        {{ else if eq .Essaie 7}}
+        {{ else if eq .Score 7}}
             <img src="style/image/3.png" alt="3eme erreur">
-        {{ else if eq .Essaie 6}}
+        {{ else if eq .Score 6}}
             <img src="style/image/4.png" alt="4eme erreur">
-        {{ else if eq .Essaie 5}}
+        {{ else if eq .Score 5}}
             <img src="style/image/5.png" alt="5eme erreur">
-        {{ else if eq .Essaie 4}}
+        {{ else if eq .Score 4}}
             <img src="style/image/6.png" alt="6eme erreur">
-        {{ else if eq .Essaie 3}}
+        {{ else if eq .Score 3}}
             <img src="style/image/7.png" alt="7eme erreur">
-        {{ else if eq .Essaie 2}}
+        {{ else if eq .Score 2}}
             <img src="style/image/8.png" alt="8eme erreur">
-        {{ else if eq .Essaie 1}}
+        {{ else if eq .Score 1}}
             <img src="style/image/9.png" alt="9eme erreur">
-        {{ else if eq .Essaie 0}}
+        {{ else if eq .Score 0}}
             <img src="style/image/10.png" alt="10eme erreur">
         {{ end }}
 
